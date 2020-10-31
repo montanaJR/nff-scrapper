@@ -7,6 +7,7 @@ from offer import Offer
 # todo make it parametrized
 from strategy.FileExportContext import FileExportContext
 from strategy.CSVConcreteStrategy import CSVConcreteStrategy
+from strategy.JSONConcreteStrategy import JSONConcreteStrategy
 
 
 def scrap():
@@ -53,3 +54,7 @@ for obj in scrap():
 strategy = CSVConcreteStrategy()
 context = FileExportContext(strategy)
 context.export(scrap())
+
+strategy2 = JSONConcreteStrategy()
+context2 = FileExportContext(strategy2)
+context2.export(scrap())
